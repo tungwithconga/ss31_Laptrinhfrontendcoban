@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .list{
+            display: flex;
+            gap: 30px;
+        }
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .violet{
+            background-color: violet;
+        }
+        .list>p{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+        }
+        .title{
+            background-color: green;
+        }
+        .title1{
+            background-color: red;
+        }
+        .title2{
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <p>change background-color</p>
+        <p>Mouse click</p>
+        <div class="list">
+            <p class="green">xanh</p>
+            <p class="red">đỏ</p>
+            <p class="violet">tím</p>
+        </div>
+    </div>
+<script>
+    document.getElementsByClassName("green")[0].addEventListener("click",()=>{
+        document.getElementsByClassName("all")[0].classList.toggle("title");
+    })
+
+    document.getElementsByClassName("red")[0].addEventListener("click",()=>{
+        document.getElementsByClassName("all")[0].classList.toggle("title1");
+    })
+
+    document.getElementsByClassName("violet")[0].addEventListener("click",()=>{
+        document.getElementsByClassName("all")[0].classList.toggle("title2");
+    })
+</script>
+</body>
+</html>
